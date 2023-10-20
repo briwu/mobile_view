@@ -21,15 +21,20 @@ p{
 }
 
 img, video{
-    border: solid 5px black;
+    /*border: solid 5px black;*/
     display: block;
     padding: 10px;
     margin: 0 auto;
     /*border-top-right-radius: 30px;*/
 }
 
+.grid img, .grid video {
+    height: 150px;
+}
+
 figure {
     text-align: center;
+    padding: 10px;
 }
 
 #main {
@@ -54,7 +59,7 @@ a{
     text-align: underline;
 
 }
-
+*/
 #skip{
     text-transform: uppercase;
 }
@@ -68,14 +73,12 @@ a{
     left: 200px;
 }
 
-.thumbnail {}
-*/
-
 
 nav a.active {
     font-size: large;
     font-weight: bold;
     background-color: antiquewhite;
+    border: solid 5px blue;
 }
 
 nav li{
@@ -86,11 +89,11 @@ nav li{
 
 @keyframes enlarge {
     from {transform: scale(1.0);}
-    to {transform: scale(1.2);}
+    to {transform: scale(1.1);}
 }
 
 img:hover, video:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     animation: enlarge 1s;
 }
 
@@ -100,12 +103,17 @@ img:hover, video:hover {
     grid-gap: 10px;
 }
 
+.last-element {
+    justify-self: center;
+    grid-column: span 2;
+}
+/*
 .grid-item {
     background-color: #3498db;
     color: #fff;
-    padding: 10px;
-    text-align: center;
+    
 }
+*/
 
 @media (prefers-reduced-motion: reduce) {
     nav a, nav a:hover {
